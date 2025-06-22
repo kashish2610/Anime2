@@ -6,7 +6,7 @@ movies_df =pickle.load(open('Anime_list.pkl','rb'))
 import gdown
 url = "https://drive.google.com/uc?id=1VNnKhgB0xNdVq4qL6HbaWvAXIT0h1Gsb"
 similarity = "similarity1.pkl"
-gdown.download(url, output, quiet=False)
+gdown.download(url, similarity, quiet=False)
 movies_title= movies_df['name'].values
 def recommend(movie):
     movie_index = movies_df[movies_df['name'] == movie].index[0]
